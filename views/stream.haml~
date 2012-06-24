@@ -1,1 +1,2 @@
 %iframe#player{ :src => "/player/#{@stream}"}
+%iframe#chat{ :src => "/chat/#{@stream}}
