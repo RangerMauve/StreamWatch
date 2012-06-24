@@ -1,5 +1,12 @@
 %w{haml sinatra sequel}.each{|n| require n}
-$DB = Sequel.connect(ENV['DATABASE_URL'])
+DB = Sequel.connect(ENV['DATABASE_URL'])
+
+# Create tables for database if not present
+if DB[:streams].nil?
+	create_table :streams do
+		
+	end
+end
 
 get '/' do
 	"Hello World"
