@@ -2,7 +2,7 @@
 DB = Sequel.connect(ENV['DATABASE_URL'])
 
 # Create tables for database if not present
-if DB[:streams].nil?
+if DB[:streams].nil? || true then
 	create_table :streams do
 		
 	end
