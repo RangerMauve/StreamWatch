@@ -28,10 +28,10 @@ end
 
 get '/player/:name' do |name|
 	@stream = name
-	haml :player, :layout => nil
+	haml :player
 end
 
 get '/chat/:name' do |name|
 	@stream = name
-	haml :chat, :layout => nil
+	haml :chat
 end
