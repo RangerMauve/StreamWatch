@@ -24,10 +24,12 @@ end
 
 get '/:name' do |name|
 	@stream = name
+	haml :stream
 end
 
 get '/player/:name' do |name|
-	
+	@stream = name
+	haml :player
 end
 
 before do

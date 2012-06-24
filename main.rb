@@ -2,7 +2,6 @@
 
 $DB = Sequel.connect(ENV['DATABASE_URL'])
 $timeout = 4 #Hourse from last refresh for a stream to be removed
-$devkey = "CQc9wE0-VpMb1uY__rDzgR-UVdAQSlAq0M8xXj5boijm_isG2Oll7MKtA6jAixPErknsgkf2EQCw6RlOkQxf15iRThcm2PMU3DtzTE_Mv3YQlZdCFLGQ0AE52DOmlE5_a"
 
 # Create tables for database if not present
 $DB.create_table? :streams do
@@ -24,10 +23,12 @@ end
 
 get '/:name' do |name|
 	@stream = name
+	haml :stream
 end
 
 get '/player/:name' do |name|
 	@stream = name
+	haml :player
 end
 
 before do

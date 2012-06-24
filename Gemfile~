@@ -1,6 +1,6 @@
 source :rubygems
 gem 'sinatra'
 gem 'haml'
-gem 'sql'
+gem 'pg'
 gem 'sequel'
 gem 'thin'
