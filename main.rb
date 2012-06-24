@@ -12,11 +12,15 @@ end
 
 class Stream < Sequel::Model
 	def timed_out
-		el = DateTime.now - self[:time]
+		el = (DateTime.now - self[:time].to_datetime).hours
 		el.strftime("%k").to_i < $timeout
 	end
 end
 
 get '/' do
 	"Hello World"
+end
+
+get '/:name' do |name|
+	@stream = name
 end
