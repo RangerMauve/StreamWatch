@@ -30,9 +30,3 @@ get '/player/:name' do |name|
 	@stream = name
 	haml :player
 end
-
-before do
-	Stream.each do |stream|
-		stream.delete if stream.timed_out?
-	end
-end
