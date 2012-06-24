@@ -30,3 +30,8 @@ get '/player/:name' do |name|
 	@stream = name
 	haml :player
 end
+
+get '/chat/:name' do |name|
+	@stream = name
+	haml :chat
+end

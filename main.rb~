@@ -31,8 +31,6 @@ get '/player/:name' do |name|
 	haml :player
 end
 
-before do
-	Stream.each do |stream|
-		stream.delete if stream.timed_out?
-	end
+get '/chat/:name' do |name|
+	@stream = name
 end
