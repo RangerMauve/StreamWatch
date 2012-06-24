@@ -1,4 +1,6 @@
 %w{haml sinatra sequel}.each{|n| require n}
+load 'models.rb'
+
 DB = Sequel.connect(ENV['DATABASE_URL'])
 
 # Create tables for database if not present
@@ -8,7 +10,6 @@ DB.create_table? :streams do
 	DateTime :time
 end
 
-require 'models.rb'
 
 get '/' do
 	"Hello World"
