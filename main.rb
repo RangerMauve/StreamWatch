@@ -18,7 +18,7 @@ class Stream < Sequel::Model
 end
 
 get '/' do
-	"Hello World"
+	haml :home
 end
 
 get '/:name' do |name|
