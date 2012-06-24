@@ -1,0 +1,10 @@
+class Stream < Sequel::Model(:streams)
+	def get_date
+		d = self[:lastview].to_s
+		Date.strptime(d,'%d|%m|%y|%H')
+	end
+	
+	def timedout
+		
+	end
+end
