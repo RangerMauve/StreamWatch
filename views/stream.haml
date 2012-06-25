@@ -1,4 +1,25 @@
+:javascript
+	// Controls for buttons and shit
+	$(function(){
+		var chatbutton = $("#chatbutton");
+		var chat = $("#chat");
+		var player = $("#player");
+		
+		chatbutton.click(fucntion(){
+			if(chat.is(":visible")){
+				chat.hide();
+				player.width("100%");
+			} else {
+				chat.show();
+				player.width("80%");
+			}
+		});
+	});
 #streamcontrols
+	%select#streamlist
+		%option NA
+	%button#gobutton Go
+	%button#chatbutton Chat
 #player
 	%object#lsplayer{:classid => "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", :height => "100%", :width => "100%"}
 		%param{:name => "movie", :value => "http://cdn.livestream.com/grid/LSPlayer.swf?channel=#{@stream}&autoPlay=false"}

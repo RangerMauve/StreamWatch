@@ -2,13 +2,20 @@ html {
 	font-family:"Courier New";
 	background:#111;
 }
+div {
+	padding:0;
+}
 #player{
-	height:100%;
+	height:90%;
 	width:80%;
 	float:left;
 }
 #chat{
-	height:100%;
+	height:90%;
 	width:20%;
 	float:left;
+}
+#streamcontrols{
+	height:10%;
+	width:100%;
 }
