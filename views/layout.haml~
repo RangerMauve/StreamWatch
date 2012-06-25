@@ -1,8 +1,8 @@
 !!! Frameset
-%html
+%html{:xmlns =>"http://www.w3.org/1999/xhtml"}
 	%head
 		%title= @title ? @title.to_s : "StreamWatch"
 		%link{:rel => "stylesheet", :type => "text/css", :href => "/scripts/layout.css"}
-		%script(src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+		-#%script(src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
 	%body
 		#main=yield
