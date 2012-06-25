@@ -7,10 +7,11 @@ textarea {
 }
 #player {
 	float:left;
-	margin:auto;
+	width:auto;
+	height:100%
 }
 #chat{
 	float:left;
 	width:200;
-	height:100;
+	height:100%;
 }
