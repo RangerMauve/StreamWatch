@@ -11,7 +11,7 @@ div {
 	float:left;
 }
 #chat{
-	height:90%;
+	height:100%;
 	width:20%;
 	float:left;
 }
@@ -19,4 +19,8 @@ div {
 	height:10%;
 	width:100%;
 	visibility:hidden;
+}
+#chatonly{
+	height:100%;
+	width:100%;
 }
