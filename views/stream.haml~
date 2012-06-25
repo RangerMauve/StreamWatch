@@ -1,4 +1,3 @@
-#playerdiv
+%frameset#streamframe{ :cols => "70%,30%"}
 	%iframe#playerframe{ :src => "/player/#{@stream}"}
-#chatdiv
 	%iframe#chatframe{ :src => "/chat/#{@stream}"}
