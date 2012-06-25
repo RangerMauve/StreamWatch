@@ -5,3 +5,9 @@ html {
 #playerframe{
 	background:blue;
 }
+#chatframe{
+	background:red;
+}
+#streamframeset{
+	width:100%;
+}
