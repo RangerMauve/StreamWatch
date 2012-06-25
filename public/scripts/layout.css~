@@ -10,11 +10,15 @@ textarea {
 	right:50%;
 	width:50%;
 	height:100%
+	background:green;
+	
 }
 #chat{
 	left:50%;
 	right:0px;
+	width:50%;
 	height:100%;
+	background:red;
 }
 
 #playerframe {
