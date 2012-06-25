@@ -11,7 +11,16 @@ textarea {
 	height:100%
 }
 #chat{
-	float:left;
+	float:right;
 	width:200;
+	height:100%;
+}
+
+#playerframe {
+	width: 100%
+	height:100%
+}
+#chat{
+	width:100%;
 	height:100%;
 }
