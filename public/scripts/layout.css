@@ -6,12 +6,11 @@ textarea {
 	resize: none;
 }
 #player {
-	width:80%;
+	left:0px
 	height:100%
 }
 #chat{
-	float:right;
-	width:20%;
+	right:0px;
 	height:100%;
 }
 
