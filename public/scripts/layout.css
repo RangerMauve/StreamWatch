@@ -1,6 +1,16 @@
 html {
 	font-family:"Courier New";
+	background:#111;
 }
 textarea { 
 	resize: none;
+}
+#player {
+	float:left;
+	margin:auto;
+}
+#chat{
+	float:left;
+	width:200;
+	height:100;
 }

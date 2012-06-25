@@ -2,7 +2,8 @@ Todo:
 %ol
 	%li
 		%strike Setup the database
-	%li Make player frame
+	%li
+		%strike Make player frame
 	%li Make chat frame
 	%li Setup stream page
 	%li Add new streams to database
