@@ -1,6 +1,6 @@
 #chatonly.fill
 	%object#lschat{:classid => "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", :height => "100%", :width => "100%"}
-  	%param{:name => "movie", :value => "http://cdn.livestream.com/chat/LivestreamChat.swf?&showTimestamp=true&channel=#{@stream}"}
-  	%param{:name => "allowScriptAccess", :value => "always"}
-  	%param{:name => "allowFullScreen", :value => "true"}
-  	%embed{ :allowFullScreen => "true", :allowScriptAccess => "always", :name => "lschat", :src => "http://cdn.livestream.com/chat/LivestreamChat.swf?&showTimestamp=true&channel=#{@stream}", :type => "application/x-shockwave-flash", :height => "100%", :width => "100%"}
+		%param{:name => "movie", :value => "http://cdn.livestream.com/chat/LivestreamChat.swf?&showTimestamp=true&channel=#{@stream}"}
+		%param{:name => "allowScriptAccess", :value => "always"}
+		%param{:name => "allowFullScreen", :value => "true"}
+		%embed{ :allowFullScreen => "true", :allowScriptAccess => "always", :name => "lschat", :src => "http://cdn.livestream.com/chat/LivestreamChat.swf?&showTimestamp=true&channel=#{@stream}", :type => "application/x-shockwave-flash", :height => "100%", :width => "100%"}
