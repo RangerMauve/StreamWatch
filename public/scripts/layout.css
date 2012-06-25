@@ -6,16 +6,17 @@ div {
 	padding:0;
 }
 #player{
-	height:90%;
+	height:100%;
 	width:80%;
 	float:left;
 }
 #chat{
-	height:90%;
+	height:100%;
 	width:20%;
 	float:left;
 }
 #streamcontrols{
 	height:10%;
 	width:100%;
+	visibility:hidden;
 }

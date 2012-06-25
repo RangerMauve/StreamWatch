@@ -2,8 +2,11 @@ html {
 	font-family:"Courier New";
 	background:#111;
 }
+div {
+	padding:0;
+}
 #player{
-	height:90%;
+	height:100%;
 	width:80%;
 	float:left;
 }
@@ -15,4 +18,5 @@ html {
 #streamcontrols{
 	height:10%;
 	width:100%;
+	visibility:hidden;
 }
