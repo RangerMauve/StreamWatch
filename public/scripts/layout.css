@@ -5,8 +5,10 @@ html {
 #player{
 	height:100%;
 	width:80%;
+	float:left;
 }
 #chat{
 	height:100%;
 	width:20%;
+	float:left;
 }
