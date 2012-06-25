@@ -2,12 +2,11 @@ html {
 	font-family:"Courier New";
 	background:#111;
 }
-#playerframe{
-	background:blue;
+#player{
+	height:100%;
+	width:80%;
 }
-#chatframe{
-	background:red;
-}
-#streamframeset{
-	width:100%;
+#chat{
+	height:100%;
+	width:
 }

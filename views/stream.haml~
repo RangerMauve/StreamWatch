@@ -1,3 +1,18 @@
-%frameset#streamframeset{ :cols => "70%, 30%"}
-	%iframe#playerframe{ :src => "/player/#{@stream}", :title => "#{@stream}"}
-	%iframe#chatframe{ :src => "/chat/#{@stream}", :title => "#Chat"}
+:javascript
+	$(function(){
+		
+	});
+	
+#streamcontrols
+#player
+	%object#lsplayer{:classid => "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", :height => "100%", :width => "100%"}
+  	%param{:name => "movie", :value => "http://cdn.livestream.com/grid/LSPlayer.swf?channel=#{@stream}&autoPlay=false"}
+  	%param{:name => "allowScriptAccess", :value => "always"}
+  	%param{:name => "allowFullScreen", :value => "true"}
+  	%embed{:allowFullScreen => "true", :allowScriptAccess => "always", :height => "100%", :name => "lsplayer", :src => "http://cdn.livestream.com/grid/LSPlayer.swf?channel=#{@stream}&autoPlay=false", :type => "application/x-shockwave-flash", :width => "100%", :wmode => "transparent"}
+#chat
+	%object#lschat{:classid => "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", :height => "100%", :width => "100%"}
+  	%param{:name => "movie", :value => "http://cdn.livestream.com/chat/LivestreamChat.swf?&channel=#{@stream}"}
+  	%param{:name => "allowScriptAccess", :value => "always"}
+  	%param{:name => "allowFullScreen", :value => "true"}
+  	%embed{ :allowFullScreen => "true", :allowScriptAccess => "always", :name => "lschat", :src => "http://cdn.livestream.com/chat/LivestreamChat.swf?&channel=#{@stream}", :type => "application/x-shockwave-flash", :height => "100%", :width => "100%"}
