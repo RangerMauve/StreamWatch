@@ -4,8 +4,10 @@
 		var chatbutton = $("#chatbutton");
 		var chat = $("#chat");
 		var player = $("#player");
+		$("#streamcontrols").hide();
 		
 		chatbutton.click(fucntion(){
+			alert("Chatbutton Pressed");
 			if(chat.is(":visible")){
 				chat.hide();
 				player.width("100%");
