@@ -1,3 +1,5 @@
+!!! Frameset
+%html
 %head
 	%title= @title ? @title.to_s : "StreamWatch"
 	%link{:rel => "stylesheet", :type => "text/css", :href => "/scripts/layout.css"}
