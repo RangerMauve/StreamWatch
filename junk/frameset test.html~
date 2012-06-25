@@ -1,0 +1,5 @@
+<html>
+<frameset cols="70%,30%">
+	<iframe src = "www.google.ca"/>
+	<iframe src = "www.google.ca"/>
+</frameset>
