@@ -20,7 +20,7 @@
 			window.open("/player/#{@stream}");
 		});
 		$("#chatonly").click(function(){
-			window.open("/player/#{@stream}");
+			window.open("/chat/#{@stream}");
 		});
 	});
 #streamcontrols
