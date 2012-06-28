@@ -1,12 +1,11 @@
 :javascript
-	// Controls for buttons and shit
 	$(function(){
 		var chatbutton = $("#chatbutton");
 		var chat = $("#chat");
 		var player = $("#player");
 		$("#streamcontrols").hide();
 		
-		chatbutton.click(fucntion(){
+		chatbutton.click(function(){
 			alert("Chatbutton Pressed");
 			if(chat.is(":visible")){
 				chat.hide();
