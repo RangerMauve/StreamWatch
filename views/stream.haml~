@@ -6,21 +6,30 @@
 		//$("#streamcontrols").hide();
 		
 		chatbutton.click(function(){
-			alert("Chatbutton Pressed");
 			if(chat.is(":visible")){
 				chat.hide();
 				player.width("100%");
+				chatbutton.html("Show Chat");
 			} else {
 				chat.show();
 				player.width("80%");
+				chatbutton.html("Hide Chat");
 			}
+		});
+		$("#playeronly").click(function(){
+			window.open("/player/#{@stream}");
+		});
+		$("#chatonly").click(function(){
+			window.open("/player/#{@stream}");
 		});
 	});
 #streamcontrols
 	%select#streamlist
 		%option NA
 	%button#gobutton Go
-	%button#chatbutton Chat
+	%button#chatbutton Hide Chat
+	%button#playeronly Player
+	$button#chatonly Chat
 #player
 	%object#lsplayer{:classid => "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", :height => "100%", :width => "100%"}
 		%param{:name => "movie", :value => "http://cdn.livestream.com/grid/LSPlayer.swf?channel=#{@stream}&autoPlay=false"}
