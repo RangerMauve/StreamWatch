@@ -20,7 +20,7 @@ div {
 	width:100%;
 	visibility:hidden;
 }
-#chatonly{
+.fill{
 	height:100%;
 	width:100%;
 }
