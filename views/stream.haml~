@@ -27,7 +27,6 @@
 	%select#streamlist
 		- @streams.each |stream|
 			%option= stream
-		-end
 	%button#gobutton Go
 	%button#chatbutton Hide Chat
 	%button#playeronly Player
