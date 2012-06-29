@@ -32,7 +32,7 @@
 	%input#streamname{:type => "text",:name => "stream"}
 	%button#gotostream Go
 %select#streamlist
-	-@stream.each |stream|
+	-@streams.each |stream|
 		%option= stream
 %button#gobutton Go
 $br/
