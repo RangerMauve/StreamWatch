@@ -1,6 +1,7 @@
 html {
 	font-family:"Courier New";
 	background:#222;
+	color:#FFF;
 }
 div {
 	padding:0px;
@@ -9,7 +10,7 @@ div {
 	height:100%;
 	width:80%;
 	float:left;
-}
+}lace 
 #chat{
 	height:100%;
 	width:20%;
@@ -21,6 +22,10 @@ div {
 }
 #streamlist{
 	width:200px;
+}
+#streamlink{
+	width:100;
+	background:#888;
 }
 .fill{
 	height:100%;

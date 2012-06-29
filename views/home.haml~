@@ -1,12 +1,36 @@
+:javascript
+	:javascript
+	$(function(){
+		var sN = $("streamname");
+		var oL = $("#streamlink");
+		
+		sn.blur(function(){
+			val = sN.val();
+			ln = "www.streamwatch.us.to/"+val;
+			oL.val();
+		});
+	});
+
+%form#newstream
+	%label{:for => "streamname"} New Stream:
+	%input#streamname{:type => "text",:name => "stream"}
+	%input{:type => "submit", :value => "Go"}
+	%br
+	%textarea#streamlink{:readonly=>"readonly"}
+		
+
 Todo:
 %ol
 	%li
 		%strike Setup the database
-	%li Make player frame
-	%li Make chat frame
-	%li Setup stream page
+	%li
+		%strike Make player frame
+	%li
+		%strike Make chat frame
+	%li
+		%strike Setup stream page
+	%li Add new stream form
+	%li Copy new stream link to clipboard
 	%li Add new streams to database
 	%li Remove streams from database at interval
 	%li Add stream tracking to main page
-	%li Add new stream form
-	%li Copy new stream link to clipboard
