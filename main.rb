@@ -27,7 +27,7 @@ end
 get '/:name' do |name|
 	@stream = name
 	if $Stream[:name => name].nil?
-		$Stream.create(:name => name,:time => DateTime.now);
+		$Stream.insert(:name => name,:time => DateTime.now);
 	end
 	haml :stream
 end
