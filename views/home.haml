@@ -6,8 +6,10 @@
 		
 		sN.blur(function(){
 			val = sN.val();
-			ln = "www.streamwatch.us.to/"+val;
-			sN.val(ln);
+			if(String(val).length > 0){
+				ln = "www.streamwatch.us.to/"+val;
+				sN.val(ln);
+			}
 		});
 		
 		gts.click(function(){
