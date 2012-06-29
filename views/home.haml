@@ -25,6 +25,11 @@
 		gts.click(function(){
 			window.location= st;
 		});
+		
+		$("#watchbutton").click(function(){
+			st = $("#streamlist").find(":selected").text();
+			window.location = st;
+		});
 	});
 
 #newstream
@@ -34,7 +39,7 @@
 %select#streamlist
 	- @streams.each do |stream|
 		%option= stream
-%button#gobutton Go
+%button#watchbutton Watch
 %br
 %br
 Todo:

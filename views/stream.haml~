@@ -22,12 +22,16 @@
 		$("#chatonly").click(function(){
 			window.open("/chat/#{@stream}");
 		});
+		$("#gobutton").click(function(){
+			st = $("#streamlist").find(":selected").text();
+			window.location = st;
+		});
 	});
 #streamcontrols
 	%select#streamlist
-		- @streams.each |stream|
+		- @streams.each do |stream|
 			%option= stream
-	%button#gobutton Go
+	%button#gobutton Watch
 	%button#chatbutton Hide Chat
 	%button#playeronly Player
 	%button#chatonly Chat

@@ -25,6 +25,11 @@
 		gts.click(function(){
 			window.location= st;
 		});
+		
+		$("#gobutton").click(function(){
+			st = $("#streamlist").find(":selected").text();
+			window.location = st;
+		});
 	});
 
 #newstream
@@ -34,7 +39,7 @@
 %select#streamlist
 	- @streams.each do |stream|
 		%option= stream
-%button#gobutton Go
+%button#gobutton Watch
 %br
 %br
 Todo:
@@ -54,7 +59,9 @@ Todo:
 	%li
 		%strike Copy new stream link to clipboard
 		Impossiburu without flash. (Fuck that)
-	%li Add new streams to database
-	%li Add stream tracking to main page
+	%li
+		%strike Add new streams to database
+	%li
+		%strike Add stream tracking to main page
 	%li Remove streams from database at interval
 
