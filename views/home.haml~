@@ -3,8 +3,7 @@ Todo:
 	%li
 		%strike Setup the database
 	%li Make player frame
-	%li
-		%strike Make chat frame
+	%li Make chat frame
 	%li Setup stream page
 	%li Add new streams to database
 	%li Remove streams from database at interval
