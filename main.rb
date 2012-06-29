@@ -10,16 +10,11 @@ $DB.create_table? :streams do
 	DateTime :time
 end
 
-class Stream < Sequel::Model
-	def timed_out?
-		el = (DateTime.now - self[:time].to_datetime)
-		el.strftime("%k").to_i < $timeout
-	end
-end
+$Stream = $DB[:streams];
 
 before do
 	@streams = [];
-	Stream.each do |stream|
+	$Stream.each do |stream|
 		@streams << stream[:name].to_s;
 	end
 	
@@ -31,8 +26,8 @@ end
 
 get '/:name' do |name|
 	@stream = name
-	if Stream[:name => name].nil?
-		Stream.create(:name => name,:time => DateTime.now);
+	if $Stream[:name => name].nil?
+		$Stream.create(:name => name,:time => DateTime.now);
 	end
 	haml :stream
 end
