@@ -4,6 +4,7 @@
 		var oL = $("#streamlink");
 		
 		sN.blur(function(){
+			alert('sN lost focus');
 			val = sN.val();
 			ln = "www.streamwatch.us.to/"+val;
 			oL.val(ln);
@@ -12,7 +13,6 @@
 
 %form#newstream
 	%label{:for => "streamname"} New Stream:
-	%br
 	%input#streamname{:type => "text",:name => "stream"}
 	%input{:type => "submit", :value => "Go"}
 	%input#streamlink{:type=>"text",:readonly=>"readonly"}
