@@ -22,7 +22,7 @@
 		$("#chatonly").click(function(){
 			window.open("/chat/#{@stream}");
 		});
-		$("#gobutton").click(function(){
+		$("#watchbutton").click(function(){
 			st = $("#streamlist").find(":selected").text();
 			window.location = st;
 		});
@@ -31,13 +31,13 @@
 	%select#streamlist
 		- @streams.each do |stream|
 			%option= stream
-	%button#gobutton Watch
+	%button#watchbutton Watch
 	%button#chatbutton Hide Chat
 	%button#playeronly Player
 	%button#chatonly Chat
 #player
 	%object#lsplayer{:classid => "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", :height => "100%", :width => "100%"}
-		%param{:name => "movie", :value => "http://cdn.livestream.com/grid/LSPlayer.swf?channel=#{@stream}&autoPlay=false"}
+		%param{:name => "movie", :value => "http://cdn.livestream.com/grid/LSPlayer.swf?channel=#{@stream}&autoPlay=true"}
 		%param{:name => "allowScriptAccess", :value => "always"}
 		%param{:name => "allowFullScreen", :value => "true"}
 		%embed{:allowFullScreen => "true", :allowScriptAccess => "always", :height => "100%", :name => "lsplayer", :src => "http://cdn.livestream.com/grid/LSPlayer.swf?channel=#{@stream}&autoPlay=false", :type => "application/x-shockwave-flash", :width => "100%", :wmode => "transparent"}
