@@ -26,9 +26,14 @@
 			window.location= st;
 		});
 		
-		$("#gobutton").click(function(){
+		$("#watchbutton").click(function(){
 			st = $("#streamlist").find(":selected").text();
 			window.location = st;
+		});
+		
+		$("#chatonly").click(function(){
+			st = $("#streamlist").find(":selected").text();
+			window.location ="/chat/"+st;
 		});
 	});
 
@@ -39,7 +44,8 @@
 %select#streamlist
 	- @streams.each do |stream|
 		%option= stream
-%button#gobutton Watch
+%button#watchbutton Watch
+%button#chatonly Chat
 %br
 %br
 Todo:
