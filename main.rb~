@@ -15,9 +15,6 @@ $Stream = $DB[:streams];
 before do
 	@streams = [];
 	$Stream.each do |stream|
-		stream.delete 
-	end
-	$Stream.each do |stream|
 		@streams << stream[:name].to_s;
 	end
 end
