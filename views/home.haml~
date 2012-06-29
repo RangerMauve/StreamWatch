@@ -51,7 +51,7 @@
 %br
 %ul
 	-$Stream.each do |stream|
-		%li== #{stream[:name].to_s} Last:#{stream[:time]}, Diff:#{((DateTime.now-stream[:time].to_datetime).to_f * 24.0).to_i}
+		%li== #{stream[:name].to_s} Last:#{stream[:time]}, Diff:#{((DateTime.now-stream[:time].to_datetime).to_f * 24.0 * 60.0).to_i}
 %br
 Todo:
 %ol
