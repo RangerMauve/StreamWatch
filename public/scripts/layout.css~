@@ -25,7 +25,9 @@ div {
 }
 #streamlink{
 	width:100;
+	height:20;
 	background:#888;
+	color:#000;
 }
 .fill{
 	height:100%;

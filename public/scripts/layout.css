@@ -24,7 +24,9 @@ div {
 	width:200px;
 }
 #streamlink{
-	width:100;
+	width:100px;
+	height:20px;
+	padding:5px;
 	background:#888;
 	color:#000;
 }

@@ -1,5 +1,4 @@
 :javascript
-	:javascript
 	$(function(){
 		var sN = $("streamname");
 		var oL = $("#streamlink");
@@ -13,10 +12,11 @@
 
 %form#newstream
 	%label{:for => "streamname"} New Stream:
+	%br
 	%input#streamname{:type => "text",:name => "stream"}
 	%input{:type => "submit", :value => "Go"}
 	%br
-	%textarea#streamlink{:readonly=>"readonly"}
+	%input#streamlink{:type=>"text",:readonly=>"readonly"}
 		
 
 Todo:
