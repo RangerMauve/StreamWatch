@@ -14,6 +14,7 @@ $Stream = $DB[:streams];
 
 before do
 	@streams = [];
+	@streams << "home"
 	$Stream.each do |stream|
 		@streams << stream[:name].to_s;
 	end
@@ -21,6 +22,10 @@ end
 
 get '/' do
 	haml :home
+end
+
+get '/home' do
+	redirect '/'
 end
 
 get '/:name' do |name|

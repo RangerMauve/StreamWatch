@@ -4,7 +4,7 @@ $DB = Sequel.connect(ENV['DATABASE_URL'])
 $timeout = 4 #Hourse from last refresh for a stream to be removed
 
 # Create tables for database if not present
-$DB.create_table! :streams do
+$DB.create_table? :streams do
 	primary_key :id
 	String :name
 	DateTime :time
@@ -21,6 +21,10 @@ end
 
 get '/' do
 	haml :home
+end
+
+get '/home' do
+	redirect '/'
 end
 
 get '/:name' do |name|
