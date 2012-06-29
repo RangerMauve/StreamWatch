@@ -22,9 +22,15 @@ def date_sans_hours hours
 end
 
 before do
+	todel = []
+	$Stream.each do |s|
+		todel << s[:id] if(date_delta_mins(s[:time]))
+	end
+	$Stream.filter(:id => todel).delete
+	
 	@streams = [];
 	@streams << "home"
-	$Stream.filter('time > ?',date_sans_hours 1).delete
+	
 	$Stream.each do |stream|
 		@streams << stream[:name].to_s;
 	end
