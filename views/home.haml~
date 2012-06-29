@@ -7,14 +7,14 @@
 		sN.blur(function(){
 			val = sN.val();
 			if(String(val).length > 0){
-			ln = "www.streamwatch.us.to/"+val;
-			sN.val(ln);
+				ln = "www.streamwatch.us.to/"+val;
+				sN.val(ln);
 			}
 		});
 		
 		gts.click(function(){
 			val = sN.val();
-			document.location.href(val);
+			window.location=(val);
 		});
 	});
 
