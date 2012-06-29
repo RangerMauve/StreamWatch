@@ -19,8 +19,9 @@ div {
 	height:10%;
 	width:100%;
 }
-
-#streamcontrols 
+#streamlist{
+	width:200px;
+}
 .fill{
 	height:100%;
 	width:100%;
