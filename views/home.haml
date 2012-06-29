@@ -49,10 +49,6 @@
 %button#watchbutton Watch
 %button#chatonly Chat
 %br
-%ul
-	-$Stream.each do |stream|
-		%li== #{stream[:name].to_s} made #{((DateTime.now-stream[:time].to_datetime).to_f * 24.0 * 60.0).to_i} minutes ago
-%br
 Todo:
 %ol
 	%li
@@ -74,5 +70,7 @@ Todo:
 		%strike Add new streams to database
 	%li
 		%strike Add stream tracking to main page
-	%li Remove streams from database at interval
+	%li
+		%strike Remove streams from database at interval
+%h1 DONE!
 

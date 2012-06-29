@@ -22,6 +22,7 @@ def date_sans_hours hours
 end
 
 before do
+	# Delete timed out threads
 	todel = []
 	$Stream.each do |s|
 		todel << s[:id] if(date_delta_mins(s[:time]) > 120)
