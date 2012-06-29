@@ -49,9 +49,9 @@
 %button#watchbutton Watch
 %button#chatonly Chat
 %br
-%li
+%ul
 	-$Stream.each do |stream|
-		%ul== #{stream[:name].to_s} was last visited at #{stream[:time]}
+		%li== #{stream[:name].to_s} Last:#{stream[:time]}, Diff:#{(stream[:time].to_datetime - DateTime.now())}
 %br
 Todo:
 %ol
