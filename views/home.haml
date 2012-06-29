@@ -3,7 +3,7 @@
 		var sN = $("streamname");
 		var oL = $("#streamlink");
 		
-		sn.blur(function(){
+		sN.blur(function(){
 			val = sN.val();
 			ln = "www.streamwatch.us.to/"+val;
 			oL.val(ln);
@@ -12,10 +12,8 @@
 
 %form#newstream
 	%label{:for => "streamname"} New Stream:
-	%br
 	%input#streamname{:type => "text",:name => "stream"}
 	%input{:type => "submit", :value => "Go"}
-	%br
 	%input#streamlink{:type=>"text",:readonly=>"readonly"}
 		
 

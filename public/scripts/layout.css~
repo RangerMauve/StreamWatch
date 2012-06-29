@@ -6,11 +6,14 @@ html {
 div {
 	padding:0px;
 }
+textarea{
+ resize: none;
+} 
 #player{
 	height:100%;
 	width:80%;
 	float:left;
-}lace 
+} 
 #chat{
 	height:100%;
 	width:20%;
@@ -24,10 +27,7 @@ div {
 	width:200px;
 }
 #streamlink{
-	width:100;
-	height:20;
-	background:#888;
-	color:#000;
+	width:100px;
 }
 .fill{
 	height:100%;
