@@ -18,7 +18,7 @@
 			code= (e.keyCode ? e.keyCode : e.which);
 			if (code == 13){
 				if(st == "/"){st = sN.val();}
-				
+				window.location= st;
 			}
 		});
 		
@@ -45,8 +45,10 @@ Todo:
 		%strike Make chat frame
 	%li
 		%strike Setup stream page
-	%li Add new stream form
-	%li Copy new stream link to clipboard
+	%li
+		%strike Add new stream form
+	%li
+		%strike Copy new stream link to clipboard
 	%li Add new streams to database
 	%li Remove streams from database at interval
 	%li Add stream tracking to main page
