@@ -24,7 +24,7 @@ end
 before do
 	todel = []
 	$Stream.each do |s|
-		todel << s[:id] if(date_delta_mins(s[:time]))
+		todel << s[:id] if(date_delta_mins(s[:time]) > 120)
 	end
 	$Stream.filter(:id => todel).delete
 	
