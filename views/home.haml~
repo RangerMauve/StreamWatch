@@ -3,10 +3,12 @@
 		var sN = $("#streamname");
 		var oL = $("#streamlink");
 		var gts = $('#gotostream');
+		var st = "/";
 		
 		sN.blur(function(){
 			val = sN.val();
 			if(String(val).length > 0){
+				st = val;
 				ln = "www.streamwatch.us.to/"+val;
 				sN.val(ln);
 			}
@@ -14,7 +16,7 @@
 		
 		gts.click(function(){
 			val = sN.val();
-			window.location=(val);
+			window.location= val;
 		});
 	});
 
