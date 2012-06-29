@@ -17,12 +17,23 @@ class Stream < Sequel::Model
 	end
 end
 
+before do
+	@streams = [];
+	Stream.each do |stream|
+		@streams << stream[:name].to_s;
+	end
+	
+end
+
 get '/' do
 	haml :home
 end
 
 get '/:name' do |name|
 	@stream = name
+	if Stream[:name => name].nil?
+		Stream.create(:name => name,:time => DateTime.now);
+	end
 	haml :stream
 end
 
