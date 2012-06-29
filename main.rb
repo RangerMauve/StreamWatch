@@ -12,9 +12,16 @@ end
 
 $Stream = $DB[:streams];
 
+def date_delta_mins d
+	((DateTime.now-d.to_datetime).to_f * 24.0 * 60.0).to_i
+end
+
 before do
 	@streams = [];
 	@streams << "home"
+	$Stream.each do |stream|
+		stream.delete if 1 * 60 <= date_delta_mins(stream[:time])
+	end
 	$Stream.each do |stream|
 		@streams << stream[:name].to_s;
 	end
