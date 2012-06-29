@@ -4,7 +4,7 @@ $DB = Sequel.connect(ENV['DATABASE_URL'])
 $timeout = 4 #Hourse from last refresh for a stream to be removed
 
 # Create tables for database if not present
-$DB.create_table! :streams do
+$DB.create_table? :streams do
 	primary_key :id
 	String :name
 	DateTime :time
@@ -15,9 +15,11 @@ $Stream = $DB[:streams];
 before do
 	@streams = [];
 	$Stream.each do |stream|
+		stream.delete 
+	end
+	$Stream.each do |stream|
 		@streams << stream[:name].to_s;
 	end
-	
 end
 
 get '/' do
@@ -27,7 +29,7 @@ end
 get '/:name' do |name|
 	@stream = name
 	if $Stream[:name => name].nil?
-		$Stream.create(:name => name,:time => DateTime.now);
+		$Stream.insert(:name => name,:time => DateTime.now);
 	end
 	haml :stream
 end

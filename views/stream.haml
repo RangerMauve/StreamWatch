@@ -25,7 +25,8 @@
 	});
 #streamcontrols
 	%select#streamlist
-		%option NA
+		-@stream.each |stream|
+			%option= stream
 	%button#gobutton Go
 	%button#chatbutton Hide Chat
 	%button#playeronly Player

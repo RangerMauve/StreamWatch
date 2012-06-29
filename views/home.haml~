@@ -31,7 +31,10 @@
 	%label{:for => "streamname"} New Stream:
 	%input#streamname{:type => "text",:name => "stream"}
 	%button#gotostream Go
-		
+%select#streamlist
+		-@stream.each |stream|
+			%option= stream
+	%button#gobutton Go
 
 Todo:
 %ol
@@ -51,5 +54,6 @@ Todo:
 		%strike Copy new stream link to clipboard
 		Impossiburu without flash. (Fuck that)
 	%li Add new streams to database
-	%li Add stream tracking to main page	%li Remove streams from database at interval
+	%li Add stream tracking to main page
+	%li Remove streams from database at interval
 
