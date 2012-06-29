@@ -3,7 +3,7 @@ html {
 	background:#222;
 }
 div {
-	padding:0;
+	padding:0px;
 }
 #player{
 	height:100%;
