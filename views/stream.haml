@@ -24,6 +24,7 @@
 		});
 		$("#watchbutton").click(function(){
 			st = $("#streamlist").find(":selected").text();
+			if(st == "home")st = '/';
 			window.location = st;
 		});
 	});
