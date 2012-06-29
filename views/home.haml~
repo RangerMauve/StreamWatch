@@ -33,7 +33,10 @@
 		
 		$("#chatonly").click(function(){
 			st = $("#streamlist").find(":selected").text();
-			window.location ="/chat/"+st;
+			if(st == "home"){
+				st = "mauvesdungeon";
+			}
+			window.location = "/chat/"+st;
 		});
 	});
 
