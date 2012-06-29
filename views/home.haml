@@ -14,6 +14,14 @@
 			}
 		});
 		
+		sN.keypress(function(e){
+			code= (e.keyCode ? e.keyCode : e.which);
+			if (code == 13){
+				if(st == "/"){st = sN.val();}
+				window.location= st;
+			}
+		});
+		
 		gts.click(function(){
 			window.location= st;
 		});
