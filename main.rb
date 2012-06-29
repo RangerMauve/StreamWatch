@@ -20,7 +20,7 @@ before do
 	@streams = [];
 	@streams << "home"
 	$Stream.each do |stream|
-		$Stream[:id => steam[:id]].delete if((1 * 60) <= date_delta_mins(stream[:time]))
+		$Stream[:id => stream[:id]].delete if((1 * 60) <= date_delta_mins(stream[:time]))
 	end
 	$Stream.each do |stream|
 		@streams << stream[:name].to_s;
