@@ -14,6 +14,7 @@ $Stream = $DB[:streams];
 
 before do
 	@streams = [];
+	@streams << "home"
 	$Stream.each do |stream|
 		@streams << stream[:name].to_s;
 	end

@@ -32,6 +32,8 @@ get '/:name' do |name|
 	@stream = name
 	if $Stream[:name => name].nil?
 		$Stream.insert(:name => name,:time => DateTime.now);
+	else
+		$Stream[:name => name].update(:time => DateTime.now);
 	end
 	haml :stream
 end
