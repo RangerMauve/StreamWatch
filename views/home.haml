@@ -2,19 +2,24 @@
 	$(function(){
 		var sN = $("#streamname");
 		var oL = $("#streamlink");
+		var gts = $('#gotostream');
 		
 		sN.blur(function(){
 			val = sN.val();
 			ln = "www.streamwatch.us.to/"+val;
-			oL.val(ln);
+			sN.val(ln);
+		});
+		
+		gts.click(function(){
+			val = sN.val();
+			document.location.href(val);
 		});
 	});
 
-%form#newstream
+#newstream
 	%label{:for => "streamname"} New Stream:
 	%input#streamname{:type => "text",:name => "stream"}
-	%input{:type => "submit", :value => "Go"}
-	%input#streamlink{:type=>"text",:readonly=>"readonly"}
+	%button#gotostream Go
 		
 
 Todo:
