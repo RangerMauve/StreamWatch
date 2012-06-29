@@ -16,10 +16,15 @@ def date_delta_mins d
 	((DateTime.now-d.to_datetime).to_f * 24.0 * 60.0).to_i
 end
 
+def date_sans_hours hours
+	d = DateTime.now
+	DateTime.new(d.year,d.month,d.day,d.hour-hours,d.min,d.sec)
+end
+
 before do
 	@streams = [];
 	@streams << "home"
-	$stream.filter(date_delta_mins(time) > 
+	$stream.filter(date_delta_mins(time) > 60).delete
 	$Stream.each do |stream|
 		@streams << stream[:name].to_s;
 	end
