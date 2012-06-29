@@ -1,6 +1,6 @@
 :javascript
 	$(function(){
-		var sN = $("streamname");
+		var sN = $("#streamname");
 		var oL = $("#streamlink");
 		
 		sN.blur(function(){
@@ -20,6 +20,8 @@
 
 Todo:
 %ol
+	%li
+		%strike Rape Guestss' stream OVER and OVER and OOOVER!
 	%li
 		%strike Setup the database
 	%li

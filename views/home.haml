@@ -1,10 +1,9 @@
 :javascript
 	$(function(){
-		var sN = $("streamname");
+		var sN = $("#streamname");
 		var oL = $("#streamlink");
 		
 		sN.blur(function(){
-			alert('sN lost focus');
 			val = sN.val();
 			ln = "www.streamwatch.us.to/"+val;
 			oL.val(ln);
