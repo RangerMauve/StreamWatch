@@ -51,7 +51,7 @@
 %br
 %li
 	-$Stream.each do |stream|
-		%ul== #{stream[:name].to_s} was last visited at #{stream[:date]}
+		%ul== #{stream[:name].to_s} was last visited at #{stream[:time]}
 %br
 Todo:
 %ol
