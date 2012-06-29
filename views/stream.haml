@@ -3,7 +3,6 @@
 		var chatbutton = $("#chatbutton");
 		var chat = $("#chat");
 		var player = $("#player");
-		//$("#streamcontrols").hide();
 		
 		chatbutton.click(function(){
 			if(chat.is(":visible")){
@@ -24,7 +23,7 @@
 		});
 		$("#watchbutton").click(function(){
 			st = $("#streamlist").find(":selected").text();
-			if(st == "home")st = '/';
+			if(st == "/home")st = '/';
 			window.location = st;
 		});
 	});

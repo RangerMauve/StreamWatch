@@ -40,10 +40,6 @@ get '/' do
 	haml :home
 end
 
-get '/home' do
-	redirect '/'
-end
-
 get '/:name' do |name|
 	@stream = name
 	if $Stream[:name => name].nil?

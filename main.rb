@@ -30,7 +30,7 @@ before do
 	$Stream.filter(:id => todel).delete
 	
 	@streams = [];
-	@streams << "home"
+	@streams << "/home"
 	$Stream.each do |stream|
 		@streams << stream[:name].to_s;
 	end
