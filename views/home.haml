@@ -28,13 +28,13 @@
 		
 		$("#watchbutton").click(function(){
 			st = $("#streamlist").find(":selected").text();
-			if(st == "home"){st = "mauvesdungeon";}
+			if(st == "home")return false;
 			window.location = st;
 		});
 		
 		$("#chatonly").click(function(){
 			st = $("#streamlist").find(":selected").text();
-			if(st == "home"){st = "mauvesdungeon";}
+			if(st == "home")return false;
 			window.location = "/chat/"+st;
 		});
 	});
