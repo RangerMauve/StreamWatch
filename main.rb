@@ -24,7 +24,7 @@ end
 before do
 	@streams = [];
 	@streams << "home"
-	$stream.filter('time > ?',date_sans_hours 1).delete
+	$Stream.filter('time > ?',date_sans_hours 1).delete
 	$Stream.each do |stream|
 		@streams << stream[:name].to_s;
 	end
