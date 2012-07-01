@@ -22,13 +22,17 @@
 			}
 		});
 		
+		sN.click(function(){
+			
+		});
+		
 		gts.click(function(){
 			window.location= st;
 		});
 		
 		$("#watchbutton").click(function(){
 			st = $("#streamlist").find(":selected").text();
-			if(st == "home")return false;
+			if(st == "/home")return false;
 			window.location = st;
 		});
 		
