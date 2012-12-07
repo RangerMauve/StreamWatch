@@ -9,7 +9,7 @@
 			val = sN.val();
 			if(String(val).length > 0){
 				st = val;
-				ln = "www.streamwatch.us.to/"+val;
+				ln = "http://streamwatch.us.to/"+val;
 				sN.val(ln);
 			}
 		});
