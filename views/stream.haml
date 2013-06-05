@@ -26,6 +26,10 @@
 			if(st == "/home")st = '/';
 			window.location = st;
 		});
+		window.onresize = function(){
+			$("#lsplayer").height(window.innerHeight);
+			$("#lschat").height(window.innerHeight);
+		}
 	});
 #streamcontrols
 	%select#streamlist
