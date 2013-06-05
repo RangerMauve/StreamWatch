@@ -3,6 +3,12 @@ html {
 	background:#222;
 	color:#FFF;
 }
+html,body {
+	height:100%;
+	width:100%;
+	margin:0;
+	padding:0;
+}
 div {
 	padding:0px;
 }
