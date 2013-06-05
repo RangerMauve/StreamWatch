@@ -32,8 +32,10 @@
 		}
 		$("#lsplayer").height("100px");
 		$("#lschat").height("100px");
-		$("#lsplayer").height(window.innerHeight);
-		$("#lschat").height(window.innerHeight);
+		setTimeout(function(){
+			$("#lsplayer").height(window.innerHeight);
+			$("#lschat").height(window.innerHeight);
+		},100);
 	});
 #streamcontrols
 	%select#streamlist
