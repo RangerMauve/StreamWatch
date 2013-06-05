@@ -1,8 +1,8 @@
 :javascript
 	$(function(){
 		var chatbutton = $("#chatbutton");
-		var chat = $("#lschat");
-		var player = $("#lsplayer");
+		var chat = $("#chat");
+		var player = $("#player");
 		
 		chatbutton.click(function(){
 			if(chat.is(":visible")){
@@ -27,11 +27,11 @@
 			window.location = st;
 		});
 		window.onresize = function(){
-			chat.height(window.innerHeight);
-			player.height(window.innerHeight);
+			$("#lsplayer").height(window.innerHeight);
+			$("#lschat").height(window.innerHeight);
 		}
-		chat.height(window.innerHeight);
-		player.height(window.innerHeight);
+		$("#lsplayer").height(window.innerHeight);
+		$("#lschat").height(window.innerHeight);
 	});
 #streamcontrols
 	%select#streamlist
