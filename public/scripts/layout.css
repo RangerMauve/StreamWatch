@@ -3,7 +3,7 @@ html {
 	background:#222;
 	color:#FFF;
 }
-html,body {
+html,body, iframe {
 	height:100%;
 	width:100%;
 	margin:0;

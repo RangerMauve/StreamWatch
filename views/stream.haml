@@ -1,8 +1,8 @@
 :javascript
 	$(function(){
 		var chatbutton = $("#chatbutton");
-		var chat = $("#chat");
-		var player = $("#player");
+		var chat = $("#lschat");
+		var player = $("#lsplayer");
 		
 		chatbutton.click(function(){
 			if(chat.is(":visible")){
@@ -27,9 +27,11 @@
 			window.location = st;
 		});
 		window.onresize = function(){
-			$("#lsplayer").height(window.innerHeight);
-			$("#lschat").height(window.innerHeight);
+			chat.height(window.innerHeight);
+			player.height(window.innerHeight);
 		}
+		chat.height(window.innerHeight);
+		player.height(window.innerHeight);
 	});
 #streamcontrols
 	%select#streamlist
@@ -40,6 +42,6 @@
 	%button#playeronly Player
 	%button#chatonly Chat
 #player
-	%iframe#lsplayer{:src => "http://www.livestream.com/#{@stream}/chat?tab=chat-livestream"}
+	%iframe#lsplayer{:src => "http://www.livestream.com/newchannel/popoutplayer?channel=#{@stream}"}
 #chat
 	%iframe#lschat{:src => "http://www.livestream.com/#{@stream}/chat?tab=chat-livestream"}
