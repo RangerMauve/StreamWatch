@@ -42,6 +42,6 @@
 	%button#playeronly Player
 	%button#chatonly Chat
 #player
-	%iframe#lsplayer{:src => "http://www.livestream.com/newchannel/popoutplayer?channel=#{@stream}"}
+	%iframe#lsplayer{:frameborder => "0",:width=> "100%",:src => "http://www.livestream.com/newchannel/popoutplayer?channel=#{@stream}"}
 #chat
-	%iframe#lschat{:src => "http://www.livestream.com/#{@stream}/chat?tab=chat-livestream"}
+	%iframe#lschat{:frameborder => "0",:width=> "100%",:src => "http://www.livestream.com/#{@stream}/chat?tab=chat-livestream"}
