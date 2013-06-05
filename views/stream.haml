@@ -40,6 +40,6 @@
 	%button#playeronly Player
 	%button#chatonly Chat
 #player
-	%iframe#lsplayer(:src => "http://www.livestream.com/#{@stream}/chat?tab=chat-livestream")
+	%iframe#lsplayer{:src => "http://www.livestream.com/#{@stream}/chat?tab=chat-livestream"}
 #chat
-	%iframe#lschat(:src => "http://www.livestream.com/#{@stream}/chat?tab=chat-livestream")
+	%iframe#lschat{:src => "http://www.livestream.com/#{@stream}/chat?tab=chat-livestream"}
