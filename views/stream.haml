@@ -41,8 +41,8 @@
 			%option= stream
 	%button#watchbutton Watch
 	%button#chatbutton Hide Chat
-	%button#playeronly Player
-	%button#chatonly Chat
+	-#%button#playeronly Player
+	-#%button#chatonly Chat
 #player
 	%iframe#lsplayer{:frameborder => "0",:width=> "100%",:src => "http://www.livestream.com/newchannel/popoutplayer?channel=#{@stream}"}
 #chat
