@@ -30,12 +30,14 @@
 			$("#lsplayer").height(window.innerHeight);
 			$("#lschat").height(window.innerHeight);
 		}
-		$("#lsplayer").height("100px");
-		$("#lschat").height("100px");
 		setTimeout(function(){
-			$("#lsplayer").height(window.innerHeight);
-			$("#lschat").height(window.innerHeight);
-		},100);
+			$("#lsplayer").height("100px");
+			$("#lschat").height("100px");
+			setTimeout(function(){
+				$("#lsplayer").height(window.innerHeight);
+				$("#lschat").height(window.innerHeight);
+			},1000);
+		},1000);
 	});
 #streamcontrols
 	%select#streamlist
