@@ -42,38 +42,13 @@
 			window.location = "/chat/"+st;
 		});
 	});
-
-#newstream
-	%label{:for => "streamname"} New Stream:
-	%input#streamname{:type => "text",:name => "stream"}
-	%button#gotostream Go
-%select#streamlist
-	- @streams.each do |stream|
-		%option= stream
-%button#watchbutton Watch
-%button#chatonly Chat
-%br
-Todo:
-%ol
-	%li
-		%strike Setup the database
-	%li
-		%strike Make player frame
-	%li
-		%strike Make chat frame
-	%li
-		%strike Setup stream page
-	%li
-		%strike Add new stream form
-	%li
-		%strike Copy new stream link to clipboard
-		Impossiburu without flash. (Fuck that)
-	%li
-		%strike Add new streams to database
-	%li
-		%strike Add stream tracking to main page
-	%li
-		%strike Remove streams from database at interval
-		(Every two hours)
-%h1 DONE!
-
+center
+	#newstream
+		%label{:for => "streamname"} New Stream:
+		%input#streamname{:type => "text",:name => "stream"}
+		%button#gotostream Go
+	%select#streamlist
+		- @streams.each do |stream|
+			%option= stream
+	%button#watchbutton Watch
+	%button#chatonly Chat
