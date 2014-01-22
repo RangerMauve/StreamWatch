@@ -1,2 +1,0 @@
-#playeronly.fill
-	%iframe{:frameborder => "0", :height => "100%", :width => "100%",:scrolling => "no", :src => "http://cdn.livestream.com/embed/#{@stream}?layout=4&height=100%25&width=100%25&autoplay=false", :style => "border:0;outline:0"}
